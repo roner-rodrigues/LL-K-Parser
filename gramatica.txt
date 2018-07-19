@@ -1,0 +1,43 @@
+<programa> ::= <principal> <lista-de-funcoes>
+<principal> ::= main[<params>](<corpo>)
+
+<lista-de-funcoes> ::= <funcao>
+<lista-de-funcoes> ::= <funcao> <lista-de-funcoes>
+
+<funcao> ::= <id>[](<corpo>)
+<funcao> ::= <id>[<params>](<corpo>)
+
+<params> ::= <id> , <params>
+<params> ::= <id>
+
+<corpo> ::= <id>[]
+<corpo> ::= <id>[<args>]
+<corpo> ::= if[<cond> , <corpo> , <corpo>]
+
+<args> ::= <arg>
+<args> ::= <arg> , <args>
+
+<arg> ::= <exp>
+<arg> ::= <corpo>
+
+<exp> ::= <id>
+<exp> ::= <exp> <exp> +
+<exp> ::= <exp> <exp> -
+<exp> ::= <corpo>
+
+<cond> ::= <exp> <exp> >
+<cond> ::= <exp> <exp> <
+<cond> ::= <exp> <exp> =
+<cond> ::= <exp> <exp> <>
+
+<id> ::= <letra> <seqsimb>
+
+<num> ::= <digito>
+<num> ::= <digito> <num>
+
+<letra> ::= a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z
+<digito> ::= 0|1|2|3|4|5|6|7|8|9
+
+<seqsimb> ::= ε
+<seqsimb> ::= <letra> <seqsimb>
+<seqsimb> ::= <digito> <seqsimb>

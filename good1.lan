@@ -1,0 +1,2 @@
+main[x](fib[n])
+fib[k](if[k b <, a[], b[]])
