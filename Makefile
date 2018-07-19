@@ -1,5 +1,5 @@
 CC		= gcc
-PROG	= testParser 
+PROG	= LLK_parser 
 
 $(PROG): main.o scanner.o parser.o
 	$(CC) -o $(PROG) main.o scanner.o parser.o
